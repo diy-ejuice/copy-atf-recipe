@@ -1,21 +1,21 @@
 {
-  "background": {
-    "persistent": false,
-    "scripts": ["src/js/background.js"]
-  },
-  "browser_action": {
+  "action": {
     "default_icon": "icons/icon19.png"
+  },
+  "background": {
+    "service_worker": "src/js/background.js"
   },
   "default_locale": "en",
   "description": "Copy an All The Flavors recipe to Markdown",
   "homepage_url": "https://alltheflavors.com",
+  "host_permissions": ["https://alltheflavors.com/recipes/*"],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Copy ATF Recipe",
-  "permissions": ["clipboardWrite", "https://alltheflavors.com/recipes/*"],
+  "permissions": ["clipboardWrite", "scripting"],
   "version": "0.1.2"
 }

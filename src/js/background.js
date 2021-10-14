@@ -1,6 +1,11 @@
-const copyToClipboard = () =>
-  chrome.tabs.executeScript({ file: "src/js/jquery.min.js" }, () => {
-    chrome.tabs.executeScript({ file: "src/js/markdown.js" });
-  });
+const copyToClipboard = (tab) =>
+  chrome.scripting.executeScript(
+    { target: { tabId: tab.id }, files: ["src/js/jquery.min.js"] },
+    () =>
+      chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["src/js/markdown.js"],
+      })
+  );
 
-chrome.browserAction.onClicked.addListener(copyToClipboard);
+chrome.action.onClicked.addListener(copyToClipboard);
