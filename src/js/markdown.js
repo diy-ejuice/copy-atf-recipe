@@ -1,8 +1,8 @@
 navigator.clipboard.writeText(
   (() => {
     const url = window.location.href;
-    const title = $(".recipe-panel-title").text();
-    const description = $(".panel-body > .description").text();
+    const title = $(".recipe-panel-title").text().trim();
+    const description = $(".panel-body > .description").text().trim();
     const flavors = $("table.flavors tr.even, table.flavors tr.odd")
       .map((_, v) => {
         const $cells = $(v).find("td");
