@@ -16,6 +16,6 @@
   },
   "manifest_version": 2,
   "name": "Copy ATF Recipe",
-  "permissions": ["clipboardWrite", "https://alltheflavors.com/*"],
+  "permissions": ["clipboardWrite", "https://alltheflavors.com/recipes/*"],
   "version": "0.1.2"
 }
