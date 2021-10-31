@@ -17,5 +17,5 @@
   "manifest_version": 3,
   "name": "Copy ATF Recipe",
   "permissions": ["clipboardWrite", "scripting"],
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
