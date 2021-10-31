@@ -6,14 +6,14 @@ navigator.clipboard.writeText(
     const flavors = $("table.flavors tr.even, table.flavors tr.odd")
       .map((_, v) => {
         const $cells = $(v).find("td");
-        const pct = $cells.eq(1).text().trim();
+        const pct = $cells.eq(3).text().trim();
         const vendor = $cells
-          .eq(2)
+          .eq(1)
           .text()
           .replace(/[\(\)]/g, "")
           .trim();
-        const name = $cells.eq(3).text().trim();
-        const flavorUrl = $cells.eq(3).find("a").attr("href").trim();
+        const name = $cells.eq(2).text().trim();
+        const flavorUrl = $cells.eq(2).find("a").attr("href").trim();
 
         return `|${pct}|${vendor}|[${name}](https://alltheflavors.com${flavorUrl})|`;
       })
